@@ -12,7 +12,7 @@ public class Reciept{
 		Reciept1 Product = new Reciept1();
 		
 		Product.Work();
-		Product.welcome();
+		//Product.welcome();
 	}
 	
 }
@@ -86,41 +86,40 @@ class testReciept extends mainBluePrint implements totalBalance, product{
 	public void display(String Name, double P, double Q, double total, double balance,int o) {
 				System.out.println("||\t Product\t||\t Price\t\t||\t Quantity\t||\t Total\t||\n"
 				+ "||\t"+Name+"\t\t||\t"+P+" \t\t||\t "+Q+"\t\t||\t "+total+"\t||\n");}
+	public void displayOutput(String Name, double P, double Q, double total, double balance,int o) {
+	
+	System.out.println("                    "+"=======================================");
+System.out.println("                    "+"GUEST: " );
+System.out.println("");
+System.out.println("");
+System.out.println("");
+System.out.println("                    "+"Products "+"              "+ " Price of Products");
+System.out.println();
+System.out.println("                    "+Name + "       "+Q+"q X $"+P );
+System.out.println("                                 $" +"********************"+ total );
+System.out.println("");
+System.out.println("");
+System.out.println("");
+System.out.println("");
+System.out.println("");
+System.out.println("");
+System.out.println("");
+//System.out.println("                    "+"Product Total Price:" );
+//System.out.println("                    "+"$" + grossPayAmount);
+System.out.println("                    "+"======================================");
+System.out.println("                    "+"Gross Pay Amount: $ " + balance);
+System.out.print("                    "+"Discount: " );
+//discountPay();
+System.out.println("");
+//System.out.println("                    "+"Discounted TOTAL:$" + (discountPay));
+System.out.println("");
+System.out.println("");
+System.out.println("");
+	
+}
 	}	
 
-class Reciept1 extends testReciept{
-//public static void displayOutput(String Name, double P, double Q, double total, double balance,int o) {
-//		
-//		System.out.println("                    "+"=======================================");
-//	System.out.println("                    "+"GUEST: " );
-//	System.out.println("");
-//	System.out.println("");
-//	System.out.println("");
-//	System.out.println("                    "+"Products "+"              "+ " Price of Products");
-//	System.out.println();
-//	System.out.println("                    "+Name + "       "+Q+"q X $"+P );
-//	System.out.println("                                 $" +"********************"+ total );
-//	System.out.println("");
-//	System.out.println("");
-//	System.out.println("");
-//	System.out.println("");
-//	System.out.println("");
-//	System.out.println("");
-//	System.out.println("");
-//	//System.out.println("                    "+"Product Total Price:" );
-//	//System.out.println("                    "+"$" + grossPayAmount);
-//	System.out.println("                    "+"======================================");
-//	System.out.println("                    "+"Gross Pay Amount: $ " + balance);
-//	System.out.print("                    "+"Discount: " );
-//	//discountPay();
-//	System.out.println("");
-//	//System.out.println("                    "+"Discounted TOTAL:$" + (discountPay));
-//	System.out.println("");
-//	System.out.println("");
-//	System.out.println("");
-//		
-//	}
-	
+class Reciept1 extends testReciept{	
 
 	public void Work() {
 		boolean invalid;
@@ -170,10 +169,12 @@ class Reciept1 extends testReciept{
 		B[i]=try1.grosspay();
 		for(o=0;o<=i;o++) {
 			T[i]=try1.productBill(Q[i],P[i]);
-			//displayOutput(Name[o], P[o], Q[o], T[o], B[i], o);
 			
-			try1.display(Name[o], P[o], Q[o], T[o], B[i], o);}
-		System.out.println("||\t\t\t||\t\t\t||\t \t\t||\t Balance:$"+balance);}
+			
+			try1.display(Name[o], P[o], Q[o], T[o], B[i], o);
+			}
+		System.out.println("||\t\t\t||\t\t\t||\t \t\t||\t Balance:$"+balance);
+		try1.displayOutput(Name[o], P[o], Q[o], T[o], B[i], o);}
 			}
 	}
 
