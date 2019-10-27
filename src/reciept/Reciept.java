@@ -5,6 +5,18 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+public class Reciept{
+	
+
+	public static void main(String[] args) {
+		Reciept1 Product = new Reciept1();
+		
+		Product.Work();
+		Product.welcome();
+	}
+	
+}
+
 interface product{
 	String productName();
 	double productBill(double Q, double P);	 
@@ -168,14 +180,4 @@ class Reciept1 extends testReciept{
 
 
 
-public class Reciept{
-	
 
-	public static void main(String[] args) {
-		Reciept1 Product = new Reciept1();
-		
-		Product.Work();
-		Product.welcome();
-	}
-	
-}
